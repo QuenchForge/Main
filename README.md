@@ -18,10 +18,10 @@
 ## Quick start
 
 ```bash
-python manage.py
+python manage.py login
 ```
 
-Sign in once. Everything else loads on demand.
+Run `python manage.py` for all commands.
 
 ## Requirements
 
