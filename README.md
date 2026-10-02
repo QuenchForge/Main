@@ -25,7 +25,7 @@ Sign in once. Everything else loads on demand.
 
 ## Requirements
 
-| | |
+| Component | Requirement |
 |---|---|
 | Python | 3.9+ |
 | Packages | stdlib only |
