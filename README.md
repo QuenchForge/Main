@@ -58,11 +58,11 @@ See [SECURITY.md](.github/SECURITY.md) for reporting.
 ---
 
 <div align="center">
-<sub>
-<a href="LICENSE">License</a> &nbsp;·&nbsp;
-<a href=".github/SECURITY.md">Security</a> &nbsp;·&nbsp;
-<a href=".github/CONTRIBUTING.md">Contributing</a>
-<br><br>
-© 2026 QuenchForge. All rights reserved.
-</sub>
+
+[![License](https://img.shields.io/badge/License-1F2328?style=for-the-badge&logo=readthedocs&logoColor=white)](LICENSE)
+[![Security](https://img.shields.io/badge/Security-1F2328?style=for-the-badge&logo=githubsecurity&logoColor=white)](.github/SECURITY.md)
+[![Contributing](https://img.shields.io/badge/Contributing-1F2328?style=for-the-badge&logo=github&logoColor=white)](.github/CONTRIBUTING.md)
+
+<sub>© 2026 QuenchForge. All rights reserved.</sub>
+
 </div>
