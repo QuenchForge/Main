@@ -37,7 +37,7 @@ Run `python manage.py` for all commands.
 |---|---|
 | Superadmin | Active |
 | Admin | Active |
-| Public (SSO) | Coming soon |
+| Public (SSO UI) | Active |
 
 ## How it works
 
