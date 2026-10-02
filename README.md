@@ -55,16 +55,14 @@ No secrets ship in this repository. Updates roll out server-side; `manage.py` ne
 Credentials are verified server-side and sessions expire after one hour.
 See [SECURITY.md](SECURITY.md) for reporting.
 
-## Contributors
-
-<a href="https://github.com/zidanristek"><img src="https://github.com/zidanristek.png" width="56" alt="zidanristek" style="border-radius:50%"></a>
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
-
-## License
-
-Proprietary. See [LICENSE](LICENSE).
+---
 
 <div align="center">
-<sub>© 2026 QuenchForge. All rights reserved.</sub>
+<sub>
+<a href="LICENSE">License</a> &nbsp;·&nbsp;
+<a href="SECURITY.md">Security</a> &nbsp;·&nbsp;
+<a href="CONTRIBUTING.md">Contributing</a>
+<br><br>
+© 2026 QuenchForge. All rights reserved.
+</sub>
 </div>
