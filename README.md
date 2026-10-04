@@ -51,7 +51,7 @@ python manage.py help
 |---|---|---|
 | **SDA** | Java data structures and algorithms practice | Available |
 | **PBP** | Practice for the PBP course | Coming soon |
-| **Tools** | Learning tools, such as course videos | Coming soon |
+| **Tools** | Tools that automate your work | Coming soon |
 
 Each module needs its own permission. `python manage.py help` lists only
 the modules your account has; if one is missing, your account does not have
