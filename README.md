@@ -19,31 +19,17 @@ has access to.
 
 ## Install
 
-Clone the repository:
-
-```bash
-git clone https://github.com/QuenchForge/Main.git quenchforge
-cd quenchforge
-python manage.py login
+```powershell
+# Windows
+iwr https://raw.githubusercontent.com/QuenchForge/Main/main/manage.py -OutFile manage.py
 ```
-
-Or copy only `manage.py` into any folder; it is the whole client.
 
 ```bash
 # macOS / Linux
 curl -O https://raw.githubusercontent.com/QuenchForge/Main/main/manage.py
 ```
 
-```powershell
-# Windows PowerShell
-iwr https://raw.githubusercontent.com/QuenchForge/Main/main/manage.py -OutFile manage.py
-```
-
-Then see what your account can use:
-
-```bash
-python manage.py help
-```
+Then `python manage.py login` and `python manage.py help`.
 
 ## Modules
 
