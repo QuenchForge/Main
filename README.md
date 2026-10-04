@@ -49,7 +49,7 @@ python manage.py help
 
 | Module | What it is | Status |
 |---|---|---|
-| **SDA** | Java data structures and algorithms practice: problems, a judge, and a line-by-line debugger | Available |
+| **SDA** | Java data structures and algorithms practice | Available |
 | **PBP** | Practice for the PBP course | Coming soon |
 | **Tools** | Learning tools, such as course videos | Coming soon |
 
@@ -57,43 +57,14 @@ Each module needs its own permission. `python manage.py help` lists only
 the modules your account has; if one is missing, your account does not have
 it yet. Ask the QuenchForge team for access.
 
-## SDA
-
-Make a workspace in an empty folder. Setup checks for a JDK and the other
-tools SDA needs, and installs what is missing.
-
-```bash
-python manage.py setup sda
-```
-
-Your workspace holds only your own Java files:
-
-```
-src/
-├── practice/   Aa_EchoInput.java, Ab_APlusB.java, ...
-└── quiz/
-```
-
-| Command | What it does |
-|---|---|
-| `python manage.py list` | Every problem, grouped by chapter; `list 7` or `list linked-list` shows one chapter |
-| `python manage.py load 1` | Put a problem in `src/`, by number, name, or code |
-| `python manage.py preview Echo` | Open the problem statement in a window |
-| `python manage.py test Echo` | Judge your answer; `-io` shows the input and output of failing cases |
-| `python manage.py debug Echo` | Step through your code line by line, with variables and objects |
-| `python manage.py reset Echo` | Put the file back to its template |
-| `python manage.py usage` | When each command is ready again |
-
-File names can be as short as you like: `EchoInput`, `Echo`, `Ech`, or the
-two-letter code `Aa` all find `Aa_EchoInput.java`. Some commands have a short
-wait between uses. The full list is in `python manage.py help sda`.
+Each module has its own commands: `python manage.py help <module>`.
 
 ## Requirements
 
 | Component | Requirement |
 |---|---|
 | Python | 3.9 or newer |
-| Packages | none for `manage.py`; `setup sda` installs what SDA needs |
+| Packages | none; a module installs what it needs when you set it up |
 | Network | an internet connection |
 | Account | SSO UI |
 
@@ -101,7 +72,7 @@ wait between uses. The full list is in `python manage.py help sda`.
 
 | Version | Date | Changes |
 |---|---|---|
-| **v1.0.0** | 2026-10-04 | First release. SSO UI sign-in, per-module access, and the SDA module: problems, judge, debugger, problem preview, and automatic setup. |
+| **v1.0.0** | 2026-10-04 | First release. SSO UI sign-in, per-module access, and the SDA module. |
 
 `manage.py` never needs updating: new versions arrive on their own the next
 time you run it.
