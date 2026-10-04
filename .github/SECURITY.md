@@ -13,7 +13,7 @@ observed. You will receive an acknowledgement within 72 hours.
 
 ## Scope
 
-- `manage.py` and the bootstrap flow
+- `manage.py`
 - Authentication and session handling
 
 Never commit credentials, tokens, or keys to this repository.

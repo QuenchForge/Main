@@ -4,56 +4,113 @@
 
 **One file. Every tool.**
 
+[![Release](https://img.shields.io/badge/release-v1.0.0-2ea44f)](#versions)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Supabase](https://img.shields.io/badge/backend-Supabase-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/)
-[![Status](https://img.shields.io/badge/status-beta-orange)](#)
-[![Access](https://img.shields.io/badge/access-private-critical)](#access)
-[![License](https://img.shields.io/badge/license-proprietary-lightgrey)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-blue)](#requirements)
+[![License](https://img.shields.io/badge/license-proprietary-lightgrey)](LICENSE)
 
 </div>
 
 ---
 
-## Quick start
+QuenchForge puts your course tools behind one command, `python manage.py`.
+Sign in once with your SSO UI account and use every module your account
+has access to.
+
+## Install
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/QuenchForge/Main.git quenchforge
+cd quenchforge
 python manage.py login
 ```
 
-Run `python manage.py` for all commands.
+Or copy only `manage.py` into any folder; it is the whole client.
+
+```bash
+# macOS / Linux
+curl -O https://raw.githubusercontent.com/QuenchForge/Main/main/manage.py
+```
+
+```powershell
+# Windows PowerShell
+iwr https://raw.githubusercontent.com/QuenchForge/Main/main/manage.py -OutFile manage.py
+```
+
+Then see what your account can use:
+
+```bash
+python manage.py help
+```
+
+## Modules
+
+| Module | What it is | Status |
+|---|---|---|
+| **SDA** | Java data structures and algorithms practice: problems, a judge, and a line-by-line debugger | Available |
+| **PBP** | Practice for the PBP course | Coming soon |
+| **Tools** | Learning tools, such as course videos | Coming soon |
+
+Each module needs its own permission. `python manage.py help` lists only
+the modules your account has; if one is missing, your account does not have
+it yet. Ask the QuenchForge team for access.
+
+## SDA
+
+Make a workspace in an empty folder. Setup checks for a JDK and the other
+tools SDA needs, and installs what is missing.
+
+```bash
+python manage.py setup sda
+```
+
+Your workspace holds only your own Java files:
+
+```
+src/
+├── practice/   Aa_EchoInput.java, Ab_APlusB.java, ...
+└── quiz/
+```
+
+| Command | What it does |
+|---|---|
+| `python manage.py list` | Every problem, grouped by chapter; `list 7` or `list linked-list` shows one chapter |
+| `python manage.py load 1` | Put a problem in `src/`, by number, name, or code |
+| `python manage.py preview Echo` | Open the problem statement in a window |
+| `python manage.py test Echo` | Judge your answer; `-io` shows the input and output of failing cases |
+| `python manage.py debug Echo` | Step through your code line by line, with variables and objects |
+| `python manage.py reset Echo` | Put the file back to its template |
+| `python manage.py usage` | When each command is ready again |
+
+File names can be as short as you like: `EchoInput`, `Echo`, `Ech`, or the
+two-letter code `Aa` all find `Aa_EchoInput.java`. Some commands have a short
+wait between uses. The full list is in `python manage.py help sda`.
 
 ## Requirements
 
 | Component | Requirement |
 |---|---|
-| Python | 3.9+ |
-| Packages | stdlib only |
-| Network | HTTPS to `*.supabase.co` |
+| Python | 3.9 or newer |
+| Packages | none for `manage.py`; `setup sda` installs what SDA needs |
+| Network | an internet connection |
+| Account | SSO UI |
 
-## Access
+## Versions
 
-| Role | Status |
-|---|---|
-| Superadmin | Active |
-| Admin | Active |
-| Public (SSO UI) | Active |
+| Version | Date | Changes |
+|---|---|---|
+| **v1.0.0** | 2026-10-04 | First release. SSO UI sign-in, per-module access, and the SDA module: problems, judge, debugger, problem preview, and automatic setup. |
 
-## How it works
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/flow-dark.svg">
-    <img src=".github/assets/flow-light.svg" alt="manage.py signs in to Auth, receives a token, then loads Core" width="760">
-  </picture>
-</p>
-
-No secrets ship in this repository. Updates roll out server-side; `manage.py` never changes.
+`manage.py` never needs updating: new versions arrive on their own the next
+time you run it.
 
 ## Security
 
-Credentials are verified server-side and sessions expire after one hour.
-See [SECURITY.md](.github/SECURITY.md) for reporting.
+Your SSO password is used only to sign you in to SSO UI and is never stored.
+Sessions end after one hour.
+Report security problems privately; see [SECURITY.md](.github/SECURITY.md).
 
 ---
 
